@@ -1,22 +1,28 @@
 {
-    "manifest_version": 3,
-    "name": "Local Proxy Bridge",
-    "version": "1.0",
-    "description": "Bridge browser connection through local proxy (HTTP or SOCKS5)",
-    "permissions": [
-      "proxy",
-      "storage",
-      "tabs"
-    ],
-    "host_permissions": [
-      "http://*/*",
-      "https://*/*"
-    ],
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": "icon_gray.png"
-    },
-    "background": {
-      "service_worker": "background.js"
+  "manifest_version": 3,
+  "name": "Local Proxy Bridge",
+  "version": "1.1",
+  "description": "Toggle proxy active/inactive on click. Use options to configure address and port.",
+  "permissions": [
+    "proxy",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "19": "icon_gray.png",
+      "38": "icon_gray.png"
     }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
   }
+}
