@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Local Proxy Bridge",
+    "version": "1.0",
+    "description": "Bridge browser connection through local proxy (HTTP or SOCKS5)",
+    "permissions": [
+      "proxy",
+      "storage",
+      "tabs"
+    ],
+    "host_permissions": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon_gray.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
